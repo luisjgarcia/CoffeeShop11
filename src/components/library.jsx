@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import Books from "./books";
 
 class Library extends Component {
   state = {};
   render() {
-    return <h1>Library</h1>;
+    return <Books />;
   }
 }
 
