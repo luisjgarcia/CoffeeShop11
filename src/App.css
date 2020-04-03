@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Create two equal columns that sits next to each other */
+body,
+html {
+  height: 100%;
+}
+
+/* The hero image */
+#bannerimage {
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=500);
+  height: 750px;
+  background-color: black;
+  background-position: center;
+}
+
+/* Place text in the middle of the image */
