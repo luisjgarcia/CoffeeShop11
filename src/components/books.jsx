@@ -7,7 +7,7 @@ class Books extends Component {
   };
   render() {
     return (
-      <table className="table">
+      <table class="table table-striped table-dark">
         <thead>
           <tr>
             <th>Title</th>
@@ -15,6 +15,7 @@ class Books extends Component {
             <th>Year of Publication</th>
             <th>ISBN</th>
             <th>Available Copies</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,10 @@ class Books extends Component {
               <td>{book.publication_year}</td>
               <td>{book.isbn}</td>
               <td>{book.available}</td>
+              <td>
+                {" "}
+                <button className="btn btn-danger btn-sm">Update</button>
+              </td>
             </tr>
           ))}
         </tbody>
