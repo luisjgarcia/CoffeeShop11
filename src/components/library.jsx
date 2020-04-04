@@ -5,7 +5,7 @@ class Library extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <div id="library-display">
         <Books />
       </div>
     );

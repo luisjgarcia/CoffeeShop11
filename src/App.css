@@ -36,8 +36,8 @@ html {
 /* The hero image */
 #bannerimage {
   width: 100%;
-  background-image: url(https://media.tumblr.com/3b51b0c51f2c6369370045b0fd1789c9/tumblr_ploq6paokX1u9wc5qo1_1280.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=500);
-  height: 750px;
+  background-image: url(https://media.tumblr.com/3b51b0c51f2c6369370045b0fd1789c9/tumblr_ploq6paokX1u9wc5qo1_1280.jpg?auto=compress&cs=tinysrgb&dpr=3&h=850&w=500);
+  height: 850px;
   background-color: black;
   background-position: center;
 }
@@ -45,7 +45,7 @@ html {
 .hero-text {
   text-align: center;
   position: relative;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -58,4 +58,10 @@ html {
 .text-monospace {
   font-size: 25px;
   color: white;
+}
+#library-display {
+  width: 100%;
+  height: 850px;
+  background-color: rgb(49, 48, 48);
+  background-position: center;
 }
