@@ -5,9 +5,9 @@ class Home extends Component {
   render() {
     return (
       <div id="bannerimage">
-        <div class="hero-text">
-          <p class="font-weight-bolder">Coffee Shop Community Library</p>
-          <p class="text-monospace">Hack.Diversity Team 11</p>
+        <div className="hero-text">
+          <p className="font-weight-bolder">Coffee Shop Community Library</p>
+          <p className="text-monospace">Hack.Diversity Team 11</p>
         </div>
       </div>
     );
