@@ -3,7 +3,11 @@ import React, { Component } from "react";
 class Admin extends Component {
   state = {};
   render() {
-    return <h1>Admin</h1>;
+    return(
+    <div id="library-display">
+      <h1>Admin</h1>;
+    </div>
+    );
   }
 }
 

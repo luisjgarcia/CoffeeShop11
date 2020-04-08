@@ -15,17 +15,34 @@ class Books extends Component {
     const books = [...this.state.books];
     const index = books.indexOf(book);
     books[index] = { ...books[index] };
-    books[index].available -= 1;
+    if(books[index].available > 0){
+      books[index].available -= 1;
+    }
     this.setState({ books });
   };
 
-  onUpdate = (book) => {
+  onReturn = (book) => {
     const books = [...this.state.books];
     const index = books.indexOf(book);
     books[index] = { ...books[index] };
-    books[index].available += 1;
+    if(books[index].available < book.copies){
+      books[index].available += 1;
+    }
     this.setState({ books });
   };
+
+  showReturnButton = (book) => {
+    const books = [...this.state.books];
+    const index = books.indexOf(book);
+    books[index] = { ...books[index] };
+    if(books[index].available === book.copies){
+      document.getElementById("return-button" + index.toString).disabled = true;
+    }
+    else{
+      document.getElementById("return-button").disabled = false;
+    }
+    return "Return";
+  }
 
   render() {
     return (
@@ -51,15 +68,16 @@ class Books extends Component {
                 {" "}
                 {book.available}/{book.copies}
               </td>
-              <td>
-                {" "}
-                <button
-                  className="btn btn-success btn-sm"
-                  onClick={() => this.onUpdate(book)}
-                >
-                  Return
-                </button>
-              </td>
+                <td>
+                  {" "}
+                  <button
+                    id="return-button"
+                    className="btn btn-success btn-sm"
+                    onClick={() => this.onReturn(book)}
+                  >
+                    Return
+                  </button>
+                </td>
               <td>
                 {" "}
                 <button
