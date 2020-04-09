@@ -68,7 +68,7 @@ html {
 
 /* Admin Page */
 
-.admin-page{
+.admin-page {
   color: white;
   padding: 10px 20px 10px 20px;
   /* background-color: #222; */
@@ -81,7 +81,7 @@ html {
   margin: 2%;
 }
 
-#cancel-button{
+#cancel-button {
   margin: 2%;
 }
 
@@ -90,6 +90,18 @@ html {
   margin-top: 3%;
 }
 
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 /* .new-book-form{ */
-  /* background-color: #222; */
+/* background-color: #222; */
 /* } */
