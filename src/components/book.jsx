@@ -9,7 +9,7 @@ class Book extends Component {
   };
 
   async componentDidMount() {
-    // call database: axios.get(URL)
+    // call database: axios.get(URL + book Id)
     const { data: book } = await http.get(
       config.apiEndpoint + "/" + this.props.match.params.id
     );
