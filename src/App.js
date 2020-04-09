@@ -6,6 +6,7 @@ import Library from "./components/library";
 import Home from "./components/home";
 import Admin from "./components/admin";
 import About from "./components/about";
+import Book from "./components/book.jsx";
 // import axios from "axios";
 
 class App extends Component {
@@ -15,10 +16,11 @@ class App extends Component {
         <NavBar />
         <div className="content">
           <Switch>
-            <Route path="/Library" component={Library} />
+            <Route exact path="/Library" component={Library} />
             <Route path="/Admin" component={Admin} />
             <Route path="/About" component={About} />
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Library/:id" component={Book} />
           </Switch>
         </div>
       </div>

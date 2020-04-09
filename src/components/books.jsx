@@ -3,6 +3,7 @@ import config from "../config.json";
 import http from "../services/httpService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from 'react-router-dom';
 
 class Books extends Component {
   state = {
@@ -109,15 +110,15 @@ class Books extends Component {
               <th>Author</th>
               <th>Year Of Publication</th>
               <th>ISBN</th>
-              <th>Availible</th>
+              <th>Available</th>
               <th></th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {this.state.books.map((book) => (
-              <tr>
-                <td>{book.title}</td>
+              <tr key={book._id}>
+                <td><Link to={`/Library/${book._id}`}  className="btn btn-block btn-outline-light">{book.title}</Link></td>
                 <td>{book.author}</td>
                 <td>{book.publication_year}</td>
                 <td>{book.isbn}</td>
