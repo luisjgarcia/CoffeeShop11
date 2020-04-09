@@ -43,6 +43,12 @@ class Book extends Component {
 
   render() {
     const book = this.state.book;
+    const availableColor = (
+      <span className="text-success">{book.available}</span>
+    )
+    const notAvailableColor = (
+      <span className="text-danger">{book.available}</span>
+    )
     return (
       <React.Fragment>
         <ToastContainer />
@@ -55,7 +61,7 @@ class Book extends Component {
               <h4>Publication Year: {book.publication_year}</h4>
               <h4>Publisher: {book.publisher}</h4>
               <h4>
-                Available: {book.available} / {book.copies}{" "}
+                Available: {book.available === 0 ? notAvailableColor : availableColor} / {book.copies}{" "}
               </h4>
             </div>
             <div className="col">
