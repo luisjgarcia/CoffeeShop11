@@ -98,19 +98,6 @@ class Books extends Component {
     this.setState({ books });
   };
 
-  showReturnButton = (book) => {
-    const books = [...this.state.books];
-    const index = books.indexOf(book);
-    books[index] = { ...books[index] };
-    if(books[index].available === book.copies){
-      document.getElementById("return-button" + index.toString).disabled = true;
-    }
-    else{
-      document.getElementById("return-button").disabled = false;
-    }
-    return "Return";
-  }
-
   render() {
     return (
       <React.Fragment>
