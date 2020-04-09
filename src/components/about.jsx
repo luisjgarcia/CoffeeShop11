@@ -14,8 +14,8 @@ class About extends Component {
   }
 
   render() {
-    return <h1>About</h1>;
+    return (<div><h1>About</h1>
+         <img src="luis.jpg" alt="luis"/> </div>)
   }
 }
-
 export default About;
