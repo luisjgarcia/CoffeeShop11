@@ -15,12 +15,8 @@ class Book {
   }
 
   isBookInfoComplete = function(){
-    if(this.title && this.author && this.year && this.isbn && this.copies){
-      return true;
-    }
-    return false;
+    return this.title && this.author && this.year && this.isbn && this.copies ? true : false;
   }
-
 }
 
 class Admin extends Component {
