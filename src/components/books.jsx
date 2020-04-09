@@ -122,14 +122,14 @@ class Books extends Component {
               <th>Author</th>
               <th>Year Of Publication</th>
               <th>ISBN</th>
-              <th>Availible</th>
+              <th>Available</th>
               <th></th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {this.state.books.map((book) => (
-              <tr>
+              <tr key={book._id}>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
                 <td>{book.publication_year}</td>
