@@ -31,6 +31,7 @@ class Admin extends Component {
     
     if(book.isBookInfoComplete()){
       toast.success(book.title + " was added successfully");
+      document.getElementById("new-book-form").reset();
     }
     else{
       toast.error("Please make sure that all fields are completed.");
