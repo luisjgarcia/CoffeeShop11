@@ -43,38 +43,52 @@ class Book extends Component {
 
   render() {
     const book = this.state.book;
+    const availableColor = (
+      <span className="text-success">{book.available}</span>
+    )
+    const notAvailableColor = (
+      <span className="text-danger">{book.available}</span>
+    )
     return (
       <React.Fragment>
         <ToastContainer />
-        <div className="bg-dark text-light container-fluid">
+        <div className="bg-dark text-light container-fluid p-3" id="library-display">
           <div className="row">
             <div className="col">
-              <h1>Title: {book.title}</h1>
-              <h2>Author: {book.author}</h2>
-              <h3>ISBN: {book.isbn}</h3>
-              <h3>Publication Year: {book.publication_year}</h3>
-              <h3>Publisher: {book.publisher}</h3>
-              <h3>
-                Available: {book.available} / {book.copies}{" "}
-              </h3>
+              <h3>Title: {book.title}</h3>
+              <h3>Author: {book.author}</h3>
+              <h4>ISBN: {book.isbn}</h4>
+              <h4>Publication Year: {book.publication_year}</h4>
+              <h4>Publisher: {book.publisher}</h4>
+              <h4>
+                Available: {book.available === 0 ? notAvailableColor : availableColor} / {book.copies}{" "}
+              </h4>
             </div>
             <div className="col">
               <img src={book.image_url_l} alt="book cover" />
             </div>
           </div>
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
-              <Link to="/Library" className="btn btn-secondary">
-                Back to Library
-              </Link>
-              <button
-                className="btn btn-success"
-                onClick={() => this.onCheckout(book)}>Check-out
-              </button>
-              <button
-                className="btn btn-primary"
-                onClick={() => this.onReturnBook(book)}>Return
-              </button>
+              <div className="col-sm-6 col-md-3">
+                <button
+                  className="btn btn-success m-2 btn-block"
+                  onClick={() => this.onCheckout(book)}>Check-out
+                </button>
+              </div>
+              <div className="col-sm-6 col-md-3">
+                <button
+                  className="btn btn-primary m-2 btn-block"
+                  onClick={() => this.onReturnBook(book)}>Return
+                </button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6 col-md-3">
+                <Link to="/Library" className="btn btn-outline-light m-2 btn-block">
+                  Back to Library
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -28,6 +28,9 @@
 }
 
 /* Create two equal columns that sits next to each other */
+body {
+  background: #343a40;
+}
 body,
 html {
   height: 100%;
