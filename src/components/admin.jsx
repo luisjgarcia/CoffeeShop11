@@ -22,6 +22,7 @@ class Admin extends Component {
   onAdd = () => {
     // alert(document.getElementById("book-title").value);
     var book = new Book(document.getElementById("book-title").value, document.getElementById("book-author").value, document.getElementById("year-of-publication").value, document.getElementById("book-isbn").value, document.getElementById("book-copies").value, document.getElementById("book-copies").value);
+    // addToDataBase(book);
     alert(book.copies);
   }
 
