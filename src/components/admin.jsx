@@ -60,37 +60,37 @@ class Admin extends Component {
             <h3>Add a book:</h3>
             <form id="new-book-form">
               <div className="form-group row">
-                <label for="book-title" className="col-sm-2 col-form-label">Title:</label>
+                <label htmlFor="book-title" className="col-sm-2 col-form-label">Title:</label>
                 <div className="col-10">
                   <input type="text" className="form-control col-6" id="book-title"></input>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="book-author" className="col-sm-2 col-form-label">Author:</label>
+                <label htmlFor="book-author" className="col-sm-2 col-form-label">Author:</label>
                 <div className="col-sm-10">
                   <input type="text" className="form-control col-6" id="book-author"></input>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="year-of-publication" className="col-sm-2 col-form-label">Year of Publication:</label>
+                <label htmlFor="year-of-publication" className="col-sm-2 col-form-label">Year of Publication:</label>
                 <div className="col-sm-10">
                   <input type="number" className="form-control col-2 col-lg-2 col-md-4 col-sm-4" id="year-of-publication"></input>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="book-publisher" className="col-sm-2 col-form-label">Publisher:</label>
+                <label htmlFor="book-publisher" className="col-sm-2 col-form-label">Publisher:</label>
                 <div className="col-sm-10">
                   <input type="text" className="form-control col-6" id="book-publisher"></input>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="book-isbn" className="col-sm-2 col-form-label">ISBN:</label>
+                <label htmlFor="book-isbn" className="col-sm-2 col-form-label">ISBN:</label>
                 <div className="col-sm-10">
                   <input type="text" className="form-control col-6" id="book-isbn"></input>
                 </div>
               </div>
               <div className="form-group row">
-                <label for="book-copies" className="col-sm-2 col-form-label"># of copies:</label>
+                <label htmlFor="book-copies" className="col-sm-2 col-form-label"># of copies:</label>
                 <div className="col-sm-10">
                   <input type="number" className="form-control col-2 col-lg-2 col-md-4 col-sm-4" id="book-copies"></input>
                 </div>
