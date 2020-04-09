@@ -13,7 +13,6 @@ class Book extends Component {
     const { data: book } = await http.get(
       config.apiEndpoint + "/" + this.props.match.params.id
     );
-    console.log(book);
     this.setState({ book });
   }
 
@@ -34,7 +33,7 @@ class Book extends Component {
               </h3>
             </div>
             <div className="col">
-              <img src={this.state.book.image_url_l} alt="book cover" />
+              <img src={book.image_url_l} alt="book cover" />
             </div>
           </div>
           <Link to="/Library" className="btn btn-secondary">

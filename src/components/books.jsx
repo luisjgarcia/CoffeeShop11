@@ -49,56 +49,6 @@ class Books extends Component {
     }
   };
 
-  onNewBook = (book) => {
-    const books = [...this.state.books];
-    const index = books.indexOf(book);
-    books[index] = { ...books[index] };
-    books[index].title = "update";
-
-    //const responce = await axios.put(
-    //  "https://aqueous-island-97232.herokuapp.com/api/books/" + book._id,
-    //  book[index]
-    // );
-
-    //console.log(responce);
-
-    this.setState({ books });
-  };
-
-  onpost = async () => {
-    // Create object
-    const obj = { title: "My Title", body: "My Body" };
-
-    //  Pessimistic Update database
-    // send book.id + book
-    // returns a new book item
-    const { data: book } = await http.post(config.apiEndpoint, obj);
-
-    // update book list with new book
-    const books = [book, ...this.state.books];
-    toast.success("New Item Added");
-    // update state
-    this.setState({ books });
-  };
-
-  onput = async (book) => {
-    // update item that came in
-    book.title = "update";
-
-    // update local books list
-    const books = [...this.state.books];
-    const index = books.indexOf(book);
-    books[index] = { ...book };
-
-    // Optimistic Update database
-    // send book.id + book
-    await http.get(config.apiEndpoint + "/" + book.id, book);
-
-    toast("Item updated");
-    // update state
-    this.setState({ books });
-  };
-
   render() {
     return (
       <React.Fragment>
