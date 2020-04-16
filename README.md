@@ -1,4 +1,4 @@
-# CoffeeShop11
+# Coffee Shop Community Library Hack.Diversity Team 11
 
 Follow these three steps to run the program
 
