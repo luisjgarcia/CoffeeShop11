@@ -27,13 +27,12 @@
   }
 }
 
-/* Create two equal columns that sits next to each other */
 body {
-  background: #343a40;
+  background: black;
 }
-body,
 html {
   height: 100%;
+  background: rgb(37, 35, 35);
 }
 
 /* The hero image */
@@ -110,6 +109,38 @@ a:visited {
   text-decoration: none;
 }
 
-/* .new-book-form{ */
-/* background-color: #222; */
-/* } */
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.team-background {
+  background: rgb(37, 35, 35);
+  border: black 3px solid;
+  display: inline-block;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  margin: 2em;
+}
+.team-pictures {
+  height: 250px;
+  width: auto;
+}
+
+.div-background {
+  background: rgb(37, 35, 35);
+}
+
+.text-title {
+  margin: 2px;
+  font-size: 25px;
+  color: white;
+}
+
+.h1-color {
+  font-size: 75px;
+  color: white;
+}
