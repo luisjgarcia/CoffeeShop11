@@ -13,7 +13,8 @@ class Book {
     isbn,
     publisher,
     copies,
-    available
+    available,
+    code
   ) {
     this.title = title;
     this.author = author;
@@ -22,6 +23,7 @@ class Book {
     this.isbn = isbn;
     this.copies = copies;
     this.available = available;
+    this.code = code;
   }
 
   isBookInfoComplete = function () {
@@ -33,6 +35,11 @@ class Book {
       this.publisher &&
       this.copies
     );
+  };
+  isAdmin = function () {
+    if (document.getElementById("book-code").value === "8989") {
+      return true;
+    } else return false;
   };
 }
 
@@ -57,7 +64,9 @@ class Admin extends Component {
       "http://images.amazon.com/images/P/0195153448.01.MZZZZZZZ.jpg";
     book.image_url_l =
       "http://images.amazon.com/images/P/0195153448.01.LZZZZZZZ.jpg";
-    if (book.isBookInfoComplete()) {
+    if (!book.isAdmin()) {
+      toast.error("Admin can only add books.");
+    } else if (book.isBookInfoComplete()) {
       await http.post(config.apiEndpoint, book);
       toast.success(book.title + " was added successfully");
       document.getElementById("new-book-form").reset();
@@ -160,6 +169,18 @@ class Admin extends Component {
                     type="number"
                     className="form-control col-2 col-lg-2 col-md-4 col-sm-4"
                     id="book-copies"
+                  ></input>
+                </div>
+              </div>
+              <div className="form-group row">
+                <label htmlFor="book-code" className="col-sm-2 col-form-label">
+                  Admin Code:
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    type="number"
+                    className="form-control col-2 col-lg-2 col-md-4 col-sm-4"
+                    id="book-code"
                   ></input>
                 </div>
               </div>
