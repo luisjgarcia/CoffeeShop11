@@ -11,7 +11,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 
 .App-intro {
@@ -27,7 +27,7 @@
   }
 }
 
-body {
+.body {
   background: black;
 }
 html {
@@ -98,13 +98,13 @@ html {
 }
 
 a:link {
-  color: white;
+  color: black;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: white;
+  color: black;
   background-color: transparent;
   text-decoration: none;
 }
@@ -118,7 +118,6 @@ a:visited {
 
 .team-background {
   background: rgb(37, 35, 35);
-  border: black 3px solid;
   display: inline-block;
   background-position: center;
   height: 250px;
@@ -140,7 +139,13 @@ a:visited {
   color: white;
 }
 
-.h1-color {
-  font-size: 75px;
+h1 {
+  font-size: 50px;
   color: white;
+  background: rgb(37, 35, 35);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  padding-top: -60px;
 }
